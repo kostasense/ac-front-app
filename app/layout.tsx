@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Montserrat } from "next/font/google";
 import "./globals.css";
+import { MyContextProvider } from './context/MyContext';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +28,9 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} ${geistSans.variable} antialiased`}
       >
-        {children}
+        <MyContextProvider>
+          {children}
+        </MyContextProvider>
       </body>
     </html>
   );

@@ -8,7 +8,19 @@
   --swiper-navigation-color: #ffffff;
 }
 
+.fixed .swiper-button-next, .fixed .swiper-button-prev {
+  --swiper-navigation-color: #black;
+}
+
 /*
+.swiper-button-next, .swiper-button-prev {
+  transition: transform 0.1s ease-out;
+}
+
+.swiper-button-next:hover , .swiper-button-prev:hover {
+  transform: scale(1.2);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -21,4 +33,15 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+.loader {
+  display: inline-block;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }

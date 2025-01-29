@@ -64,7 +64,7 @@ const Home: React.FC = () => {
       .finally(() => {
         setLoading(false);
       });
-  },);
+  }, []);
 
   useEffect(() => {
     if (startDate && endDate && passengersWithBirthdates.length > 0) {

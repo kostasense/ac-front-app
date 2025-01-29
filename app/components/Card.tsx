@@ -192,7 +192,7 @@ const Card: React.FC<CardProps> = ({
               >
                 <IoClose className="m-auto" size="30" />
               </button>
-              <h2 className="text-2xl font-semibold">{name}</h2>
+              <h2 className="text-xl font-semibold">{name}</h2>
             </div>
 
             <Stars rating={stars}></Stars>
@@ -200,11 +200,11 @@ const Card: React.FC<CardProps> = ({
               Precio por noche: MXN${pricePerNight}
             </p>
             <p className="text-md lg:text-lg text-blue-600">
-              Total: MXN${totalPrice}
+              Total: MXN${totalPrice.toFixed(2)}
             </p>
             <p className="text-gray-700">Tipo de comida: {mealType}</p>
             <p
-              className={`rounded-md bg-green-400 text-sm text-white p-2 w-fit ${
+              className={`rounded-md bg-green-400 text-xs md:text-sm text-white p-2 w-fit ${
                 hasRefundableOptions ? "" : "hidden"
               }`}
             >
@@ -222,7 +222,7 @@ const Card: React.FC<CardProps> = ({
               </div>
             </div>
 
-            <h1>Revisa nuestros seguros de viaje:</h1>
+            <h1 className={`${hasRefundableOptions ? "hidden" : ""}`}>Revisa nuestros seguros de viaje:</h1>
             
             <Swiper
               modules={[Navigation]}

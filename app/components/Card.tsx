@@ -232,8 +232,8 @@ const Card: React.FC<CardProps> = ({
               loop
               className="w-full"
             >
-              {relatedProducts.map((product) => (
-                <SwiperSlide className="my-auto">
+              {relatedProducts.map((product, index) => (
+                <SwiperSlide key={index} className="my-auto">
                   <ProductCard product={product} />
                 </SwiperSlide>
               ))}
